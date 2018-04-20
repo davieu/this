@@ -232,20 +232,332 @@
 
 
 
-var users = [
-  { id: 1, name: 'Bob', email: 'bob@gmail.com' },
-  { id: 2, name: 'Cindy', email: 'cindy@gmail.com' },
-  { id: 3, name: 'Susan', email: 'susan@gmail.com' },
-  { id: 4, name: 'Sarah', email: 'sarah@gmail.com' },
-  { id: 5, name: 'Tim', email: 'tim@gmail.com' }
-];
+// var users = [
+//   { id: 1, name: 'Bob', email: 'bob@gmail.com' },
+//   { id: 2, name: 'Cindy', email: 'cindy@gmail.com' },
+//   { id: 3, name: 'Susan', email: 'susan@gmail.com' },
+//   { id: 4, name: 'Sarah', email: 'sarah@gmail.com' },
+//   { id: 5, name: 'Tim', email: 'tim@gmail.com' }
+// ];
+//
+// var pluck = function (array, property) {
+//   var result = array.map(function(user) {
+//     return user[property];
+//   });// write your code here
+//   console.log(result, email);
+// };
+//
+//
+// pluck(users, 'email'); // returns ['bob@gmail.com', `cindy@gmail.com`, `susan@gmail.com`, `sarah@gmail.com`, `tim@gmail.com` ];
 
-var pluck = function (array, property) {
-  var result = array.map(function(user) {
-    return user[property];
-  });// write your code here
-  console.log();
-};
+
+// airplane.prototype.takeOff
 
 
-pluck(users, 'email'); // returns ['bob@gmail.com', `cindy@gmail.com`, `susan@gmail.com`, `sarah@gmail.com`, `tim@gmail.com` ];
+
+// class Vehicle {
+//   constructor (x, y, speed) {
+//     this.x = x;
+//     this.y = y;
+//     this.speed = speed;
+//   }
+//
+//   move() {
+//     this.x = this.x + this.speed * this.randomStep();
+//     this.y = this.y + this.speed * this.randomStep();
+//   }
+//
+//   randomStep() {
+//       if (Math.random() < 0.5) {
+//         return -1;
+//       } else {
+//         return 1;
+//       }
+//
+//   }
+//
+// }
+// class Car extends Vehicle{
+//     constructor(x, y) {
+//       super(x, y, 5);
+//     }
+//       honk () {
+//         console.log('honk');
+//       }
+// }
+//
+// class Bicycle extends Vehicle{
+//     constructor(x, y) {
+//       super(x, y, 2);
+//     }
+// }
+
+// robot dog delegating the work
+
+// var Foo = {
+//   init: function (who) {
+//     this.me = who;
+//   },
+//   identify: function () {
+//     return "I am " + this.me;
+//   }
+// };
+//
+// var Bar = Object.create(Foo);
+//
+// Bar.speak = function () {
+//   alert("Hello, " + this.identify() + ".");
+// };
+//
+// var b1 = Object.create(Bar);
+// b1.init("b1");
+//
+// var b2 = Object.create(Bar);
+// b2.init("b2");
+//
+// b1.speak();
+// b2.speak();
+
+
+
+
+// var Vehicle = {
+//   types: function (x, y, speed) {
+//   this.x = x;
+//   this.y = y;
+//   this.speed = speed;
+//   },
+//   move: function() {
+//   this.x = this.x + this.speed * this.randomStep();
+//   this.y = this.y + this.speed * this.randomStep();
+//   },
+//   randomStep: function() {
+//   if (Math.random() < 0.5) {
+//     return -1;
+//   } else {
+//     return 1;
+//   }
+// };
+//
+//   var car = Object.create(Vehicle)
+//
+//   Car.honk = function () {
+//     console.log("Beep! Beep!");
+//   };
+//
+//   var Bicycle = Object.create(vehicle)
+//
+//   Bicycle.honk = function () {
+//     console.log("Hey! Watch out!");
+//   };
+//
+//   var angryBicycle = Object.create(vehicle)
+//     Bicycle.call(this, x, y);
+//   };
+
+
+
+// var sum = function(num1, num2) {
+//   return num1 + num2;
+// };
+//
+// console.log(sum(3, 2));
+
+
+
+// var coffeeShop = {
+//   beans: 100
+// };
+//
+// var makeCoffee = function (shop) {
+//   shop.beans -= 10;
+//   console.log('coffee is being made!');
+// };
+//
+// var buyBeans = function (shop) {
+//   shop.beans += 20;
+//   console.log('purchased some beans!');
+// };
+//
+// makeCoffee(coffeeShop);
+// buyBeans(coffeeShop);
+//
+// console.log(coffeeShop); // { beans: 110 }
+
+
+
+
+// const coffeeShop = Object.freeze({
+//   beans: 100
+// });
+//
+// const makeCoffee = function (state) {
+//   const beanCount = state.beans - 10;
+//
+//   return {
+//     beans: beanCount
+//   }
+// };
+//
+// const buyBeans = function (state) {
+//   const beanCount = state.beans + 20;
+//
+//   return {
+//     beans: beanCount
+//   }
+// };
+//
+// const coffeeShopAfterBuyingAndSelling = buyBeans(makeCoffee(coffeeShop));
+
+
+
+
+// const greet = (firstName => {
+//   return lastName
+// })
+
+
+
+
+// const o = Object.freeze({ x: 1 });
+// console.log(o.x); // 1
+// o.x = 2;
+
+
+
+
+// var UserModule = function (name, email) {
+//   var attributes = {
+//     name: name,
+//     email: email || null,
+//   };
+//
+//   var getAttribute = function (attribute) {
+//     if (attributes[attribute]) {
+//       return attributes[attribute];
+//     }
+//   };
+//
+//   var setAttribute = function (attribute, value) {
+//     if (attributes[attribute]) {
+//       attributes[attribute] = value;
+//     }
+//   };
+//
+//   return {
+//     get: getAttribute,
+//     set: setAttribute
+//   };
+// };
+//
+// var learnToCodeRDU = UsersModule();
+
+
+
+
+// var UserModule = function (name, email) {
+//   var attributes = {
+//     name: name,
+//     email: email || null,
+//   };
+//
+//   var getAttribute = function (attribute) {
+//     if (attributes[attribute]) {
+//       return attributes[attribute];
+//     }
+//   };
+//
+//   var setAttribute = function (attribute, value) {
+//     if (attributes[attribute]) {
+//       attributes[attribute] = value;
+//     }
+//   };
+//
+//   return {
+//     get: getAttribute,
+//     set: setAttribute
+//   };
+// };
+//
+// var learnToCodeRDU = UsersModule();
+
+
+
+
+// var number = 5;
+//
+// var double = function (num) {
+//
+//   for (var i= 1; i < 4; i++) {
+//
+//       number = num * 2;
+//       console.log(number);
+//   }
+// };
+//
+// double(number);
+
+
+
+
+// const coffeeShop = Object.freeze({
+//   beans: 100
+// });
+//
+// const makeCoffee = function (state) {
+//   const beanCount = state.beans - 10;
+//
+//   return {
+//     beans: beanCount
+//   }
+// };
+//
+// const buyBeans = function (state) {
+//   const beanCount = state.beans + 20;
+//
+//   return {
+//     beans: beanCount
+//   }
+// };
+//
+// const coffeeShopAfterBuyingAndSelling = buyBeans(makeCoffee(coffeeShop));
+//
+// console.log(coffeeShopAfterBuyingAndSelling.beans);
+
+//
+// var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//
+// var evenNumbers = numbers.filter(function (n) {
+//   return n % 2 === 0;
+// });
+//
+// console.log(evenNumbers);
+
+
+
+// var UserModule = function (name, email) {
+//   var attributes = {
+//     name: name,
+//     email: email || null,
+//   };
+//
+//   var getAttribute = function (attribute) {
+//     if (attributes[attribute]) {
+//       return attributes[attribute];
+//     }
+//   };
+//
+//   var setAttribute = function (attribute, value) {
+//     if (attributes[attribute]) {
+//       attributes[attribute] = value;
+//     }
+//   };
+//
+//   return {
+//     get: getAttribute,
+//     set: setAttribute
+//   };
+// };
+//
+// var learnToCodeRDU = UserModule('davis', 'du');
+// console.log(learnToCodeRDU.name);
