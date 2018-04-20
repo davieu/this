@@ -561,3 +561,37 @@
 //
 // var learnToCodeRDU = UserModule('davis', 'du');
 // console.log(learnToCodeRDU.name);
+
+
+
+
+// var myBike = {x: 10, y: 20};
+// var myCar = {x: 10, y: 20};
+//
+// var bicycleAverageSpeed = 5;
+// var carAverageSpeed = 20;
+//
+// var move = function (speed, vehicle) {
+//   vehicle.x = vehicle.x + speed * randomStep();
+//   vehicle.y = vehicle.y + speed * randomStep();
+// };
+//
+// // A helper function that randomly returns either -1 or 1
+// var randomStep = function () {
+//   if (Math.random() < 0.5) {
+//     return -1;
+//   } else {
+//     return 1;
+//   }
+// }
+//
+// move(20, myCar);
+//
+// console.log(myCar);
+// move(20, myCar);
+//
+// console.log(myCar);
+// move(20, myCar);
+//
+// console.log(myCar);
+// move(20, myCar);
