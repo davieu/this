@@ -595,3 +595,23 @@
 //
 // console.log(myCar);
 // move(20, myCar);
+
+
+function countE(){
+    var ask = prompt('What word do you want to check?');
+    if (typeof(ask) != 'string') {
+      return alert('Wrong');
+
+    } else {
+      var counter = 0;
+      for(var i = 0; i < ask.length; i++) {
+        if(ask[i] === 'e' || ask[i] === 'E') {
+          counter++;
+        }
+      }
+
+    alert(counter);
+      }
+      return true;
+}
+countE();
