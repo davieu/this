@@ -615,3 +615,23 @@ function countE(){
       return true;
 }
 countE();
+
+
+
+
+
+function addPassenger(name, list){
+  if (list.length === 0) {
+    list.push(name);
+  }else{
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] === undefined){
+        list[i] = name;
+        return list;
+      }else if (list.length - 1 === i){
+          list[i].push(name);
+          return list;
+      }
+    }
+  }
+}
